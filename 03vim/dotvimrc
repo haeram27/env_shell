@@ -85,16 +85,16 @@ let g:airline_symbols.dirty='⚡'
 " <F1> folding
 "map <F1> v]}zf
 map <F1> :tabnew<cr>
-" <F2> circle window
+" <F2> change window
 map <F2> <C-w><C-w>
 " <F3> NERDTree
 map <F3> :NERDTreeToggle<cr>
 " <F4> Tlist
 "map <F4> :Tlist<cr>
 map <F4> :TagbarToggle<cr>
-" <F5> [i : show definition of variable
+" <F5> [i  show definition
 map <F5> [i
-" <F6> gd : goto declaration of variable
+" <F6> gd  goto declaration
 map <F6> gd
 " <F7> shell
 map <F7> :VimShell<cr>
@@ -121,7 +121,6 @@ imap <C-v> <C-r><C-o>+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim options :: BEGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
   " render properly when inside 256-color tmux and GNU screen.
@@ -141,13 +140,18 @@ set termencoding=utf-8
 
 set number
 "set list
-set autoindent
-set cindent
-set smartindent
 set ruler
 
+"set tabstop=4
+set softtabstop=4
 set shiftwidth=4
-set tabstop=4
+set expandtab
+"set smarttab
+
+"set cindent
+set autoindent
+"set smartindent
+
 set showmatch
 set backspace=indent,eol,start
 set backspace=2
