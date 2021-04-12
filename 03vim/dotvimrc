@@ -164,3 +164,31 @@ set wrapscan
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim options :: END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Development :: BEGIN
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" >>>>>>>> ctags Configs >>>>>>>>
+set tags=./tags,../tags,../../tags,../../../tags,../../../../tags
+" <<<<<<<< ctags Configs <<<<<<<<
+
+" >>>>>>>> cscope Configs >>>>>>>>
+set csprg=/usr/bin/cscope
+set csto=0
+set cst
+set nocsverb
+
+if filereadable("./cscope.out")
+cs add cscope.out
+else
+cs add /usr/src/linux/cscope.out
+endif
+set csverb
+" <<<<<<<< cscope Configs <<<<<<<<
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Development :: END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
