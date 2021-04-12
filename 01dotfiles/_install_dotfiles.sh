@@ -13,6 +13,9 @@ function install() {
     echo >> ~/.bashrc
 	echo '[[ -f ~/.bashrc.cust ]] && . ~/.bashrc.cust' >> ~/.bashrc
     
+    echo >> ~/.zshrc
+	echo '[[ -f ~/.zshrc.cust ]] && . ~/.zshrc.cust' >> ~/.zshrc
+    
     tar xvfz ./dotzsh.tgz
     mkdir ~/.zsh; mv ./dotzsh/* ~/.zsh/
     rm -rf ./dotzsh
@@ -22,7 +25,7 @@ function install() {
     mkdir ~/.cache; mv ./gitstatus ~/.cache/
 
     chmod 644 ~/.[^.]*.cust ~/.gitconfig ~/.p10k.zsh ~/.zshrc
-    chmod 655 ~/.zsh
+    chmod 700 ~/.zsh
 
     chsh -s $(which zsh)
 }
