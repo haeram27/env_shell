@@ -1,0 +1,38 @@
+[diff]
+	tool = bc3
+[difftool "bc3"]
+	trustExitCode = true
+[merge]
+	tool = bc3
+[mergetool "bc3"]
+	trustExitCode = true
+[user]
+	name = haeram27
+	email = haeram27@gmail.com
+[branch]
+	autosetuprebase = always
+[alias]
+	br = branch
+	cf = config
+	cfl = config -l
+	cl = clone --recurse-submodules
+	cln = clean -dfxn
+	clnx = clean -dfx
+	cm = commit
+	cma = commit --amend
+	cmm = commit -m
+	co = checkout
+	df = diff --color=always --word-diff=plain
+	dt = difftool -y
+	lo = log -50 --graph --pretty=format:'%C(auto)%h%d (%ar : %an) %s'
+	lon = log --name-only
+	mt = mergetool -y
+	sh = stash
+	shl = stash list
+	st = status
+	subi = submodule init
+	subu = submodule update -f
+	subui = submodule update -f --init --recursive
+	pl = pull --recurse-submodules=yes --rebase=true --autostash
+	ps = push
+	reb = rebase --autostash

@@ -1,0 +1,82 @@
+##############################################
+# COLORS
+##############################################
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+
+##############################################
+# SEPCIAL
+##############################################
+alias tlog='tee "log$(date +%s%N)$$"'
+
+
+##############################################
+# LS
+##############################################
+alias l='ls -l'
+alias la='ls -aF'
+alias ll='ls -alF'
+
+
+##############################################
+# FIND
+############################################## 
+# findn: name-specific
+# USAGE: $ findni . "*cust"
+function findn() {
+        find "$1" -name "$2" 2>/dev/null
+}
+
+# findl: follow symboliclink
+function findl() {
+        find -L "$1" -name "$2" 2>/dev/null
+}
+
+##############################################
+# GREP
+##############################################
+# grepp: grep for pipe
+# USAGE: $ ll | grepp ".alias_cust"
+alias grepp='grep -inH $1 $2 2>/dev/null'
+
+# grepr: grep for recursive searching
+# USAGE: $ grepr "alias grepr" .
+alias grepr='grep -inHIR $1 2>/dev/null'
+
+
+##############################################
+# XARGS
+##############################################
+# xargsp: xargs runs with multiple process
+alias xargsp='xargs -P`nproc` -i bash -c'
+ 
+
+##############################################
+# XCLIP
+##############################################
+# USAGE: $ xclips ~/ssh/id_rsa.pub
+alias xclips='xclip -selection clipboard <'
+
+
+##############################################
+# ETC
+##############################################
+# change default terminal
+alias chterm='sudo update-alternatives --config x-terminal-emulator'
+
+
+##############################################
+# CUSTOM COMBINATIONS
+##############################################
+# build(make) and grep  errors
+alias mage='make -j12 2>&1 | greps error'

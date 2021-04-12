@@ -1,0 +1,24 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+  title_font = Ubuntu 11
+[keybindings]
+[profiles]
+  [[default]]
+    background_color = "#fbf1c7"
+    background_darkness = 0.8
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = D2Coding ligature 11
+    foreground_color = "#3c3836"
+    scrollback_infinite = True
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      size = 1000, 600
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
