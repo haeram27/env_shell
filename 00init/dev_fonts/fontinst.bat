@@ -10,7 +10,8 @@ set DIRSYSFONT=%windir%\fonts
 set REG_KEY="HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts"
 
 set DIRD2=d2coding
-set ALL=%DIRD2%
+set DIRMES=meslo
+set ALL=%DIRD2% %DIRMES%
 
 xcopy %DIRD2%\* %DIRSYSFONT% 
 
