@@ -96,8 +96,8 @@ map <F4> :TagbarToggle<cr>
 map <F5> [i
 " <F6> gd  goto declaration
 map <F6> gd
-" <F7> shell
-map <F7> :VimShell<cr>
+" <F7> pt pastetoggle
+set pt=<F7>
 " <F8> Dox
 map <F8> :Dox<cr>
 " bnext, bprev
@@ -107,10 +107,10 @@ map <F12> :bn<cr>
 map <S-Tab> gt<cr>
 
 " Copy&Paste Ctrl+c Ctrl+x Ctrl+v
-vmap <C-c> "+yi
-vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
-imap <C-v> <C-r><C-o>+
+"vmap <C-c> "+yi
+"vmap <C-x> "+c
+"vmap <C-v> c<ESC>"+p
+"imap <C-v> <C-r><C-o>+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mapping :: END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -139,24 +139,26 @@ set fileencodings=utf-8,cp949,default,latin1
 set termencoding=utf-8
 
 set number
-"set list
 set ruler
+"set list
+
+set autoindent
+"set cindent
+"set smartindent
+"set copyindent
+"set preserveindent
+
+set expandtab
+set nosmarttab
 
 "set tabstop=4
-set softtabstop=4
+set softtabstop=-1
 set shiftwidth=4
-set expandtab
-"set smarttab
-
-"set cindent
-set autoindent
-"set smartindent
 
 set showmatch
 set backspace=indent,eol,start
 set backspace=2
 
-set paste
 set history=500
 set hlsearch
 
