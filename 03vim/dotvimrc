@@ -143,8 +143,8 @@ set ruler
 "set list
 
 set autoindent
+set smartindent
 "set cindent
-"set smartindent
 "set copyindent
 "set preserveindent
 
@@ -171,7 +171,24 @@ set wrapscan
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Development :: BEGIN
+" colorscheme :: START
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" check available colorscheme 
+" 1) :color[scheme] <Ctrl-D>
+" 2) /usr/share/vim/vim81/colors/
+" 3) ~/.vim/color
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"color default
+colorscheme molokai
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" colorscheme :: END
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" dev:: BEGIN
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " >>>>>>>> ctags Configs >>>>>>>>
 set tags=./tags,../tags,../../tags,../../../tags,../../../../tags
@@ -191,6 +208,6 @@ endif
 set csverb
 " <<<<<<<< cscope Configs <<<<<<<<
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Development :: END
+" dev:: END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
